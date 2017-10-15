@@ -16,7 +16,7 @@ public class ReverserClient {
 		ReverserProxy reverserProxy = (ReverserProxy) namingService.lookup("Reverser");
 
 		// invoke reverser		
-		StringBuffer str = new StringBuffer("Midlleware");
+		StringBuffer str = new StringBuffer(" Programação concorrente Distribuida - Midlleware");
 		for(int i = 0; i<1000; i++) {
 			str = reverserProxy.inverter(str);
 			System.out.println(i + " " + str);
