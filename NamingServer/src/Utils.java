@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.DatagramSocket;
 import java.net.ServerSocket;
 
-public class UtilsConf {
+public class Utils {
 
 	public static final int MIN_PORT_NUMBER = 8000;
 	public static final int MAX_PORT_NUMBER = 9000;

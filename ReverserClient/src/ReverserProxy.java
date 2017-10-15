@@ -9,7 +9,7 @@ public class ReverserProxy extends ClientProxy implements IReverser{
 	// TODO objID
 	public ReverserProxy() throws UnknownHostException {
 		this.host = InetAddress.getLocalHost().getHostName();
-		this.port = UtilsConf.nextPortAvailable();
+		this.port = Utils.nextPortAvailable();
 	}
 	
 	public ReverserProxy(String host, int port) {
