@@ -13,7 +13,7 @@ public class ReverserServer {
 
 		// register reverser in Naming service
 		namingService.bind("Reverser", reverser);
-		System.out.println("Servidor da applicação Reverser está pronto...");
+		System.out.println("Servidor da applicacao Reverser esta pronto...");
 		
 		// invoke Invoker
 		invoker.invoke(reverser);
