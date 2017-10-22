@@ -7,6 +7,8 @@ Aplicação Reverser, com finalidade de inverter uma string utilizando um middle
 
 - Na pasta onde os arquivos .java da aplicação estão, executar o comando: 
 
+      sudo docker run -p 1313:1313 --rm -v $PWD:/app -w /app demo/oracle-java:8 javac ReverserProxy.java
+      
       sudo docker run -p 1313:1313 --rm -v $PWD:/app -w /app demo/oracle-java:8 javac NamingServer.java
 
 - Em seguida: 
