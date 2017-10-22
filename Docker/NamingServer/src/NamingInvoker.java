@@ -23,7 +23,8 @@ public class NamingInvoker {
 					.trim()) {
 
 			case "bind":
-
+				
+				System.out.println("Servidor de nomes - Executando BIND");
 				// @ Invokes the remote object
 				String register_p1 = msgUnmarshalled.getBody().getRequestBody()
 						.getParameters().get(0).toString();
@@ -45,7 +46,8 @@ public class NamingInvoker {
 				break;
 
 			case "lookup":
-
+				
+				System.out.println("Servidor de nomes - Executando LOOKUP");
 				// @ Invokes the remote object
 				String bind_p1 = msgUnmarshalled.getBody().getRequestBody()
 						.getParameters().get(0).toString();
@@ -65,7 +67,8 @@ public class NamingInvoker {
 				break;
 				
 			case "list":
-
+				
+				System.out.println("Servidor de nomes - Executando LIST");
 				// @ Invokes the remote object
 				ter.setResult(rObj.list());
 

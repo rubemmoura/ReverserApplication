@@ -9,7 +9,7 @@ public class ReverserServer {
 		ReverserProxy reverser = new ReverserProxy();
 
 		// obtain instance of Naming Service
-		NamingProxy namingService = new NamingProxy("localhost", 1313);
+		NamingProxy namingService = new NamingProxy("127.0.0.1", 1313);
 
 		// register reverser in Naming service
 		namingService.bind("Reverser", reverser);
