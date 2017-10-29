@@ -14,7 +14,7 @@ public class InvokerProxy extends ClientProxy{
 		this.port = p;	
 	}
 	
-	public void inverter(String serviceName) throws UnknownHostException, IOException, Throwable {
+	public void inverter(StringBuffer serviceName) throws UnknownHostException, IOException, Throwable {
 		Invocation inv = new Invocation();
 		new Termination();
 		ArrayList<Object> parameters = new ArrayList<Object>();

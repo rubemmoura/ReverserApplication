@@ -8,5 +8,4 @@ public class ReverserImpl implements IReverser{
 	public StringBuffer inverter(StringBuffer string) throws IOException, InterruptedException, Throwable {
 		return string.reverse();
 	}
-
 }

@@ -3,7 +3,7 @@ import java.io.IOException;
 public class ReverserServer {
 
 	public static void main(String[] args) throws IOException, Throwable {
-		String serviceName = "inverter";
+		StringBuffer serviceName = new StringBuffer("inverter");
 //		ReverserInvoker invoker = new ReverserInvoker();
 		InvokerProxy invoker = new InvokerProxy("127.0.0.1", 8081);
 		
