@@ -8,7 +8,7 @@ public class ReverserServer {
 		ReverserInvoker invoker = new ReverserInvoker();
 		ReverserProxy reverser = new ReverserProxy("127.0.0.1",1314);
 		
-		System.out.println("Servidor da aplicacao está pronto.");
+		System.out.println("Servidor da aplicacao esta pronto.");
 		invoker.invoke(reverser);
 	}
 }
