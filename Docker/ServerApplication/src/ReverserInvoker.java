@@ -10,6 +10,7 @@ public class ReverserInvoker {
 		Message msgUnmarshalled = new Message();
 		Marshaller mrsh = new Marshaller();
 		Termination ter = new Termination();
+		int count = 0;
 
 		// create remote object
 		ReverserImpl reverserObj = new ReverserImpl();
@@ -24,6 +25,8 @@ public class ReverserInvoker {
 
 			switch (msgUnmarshalled.getBody().getRequestHeader().getOperation()) {
 			case "inverter":
+				count++;
+				System.out.println(count + " - Executando aplicacao no Server.");
 				// @ Invokes the remote object
 				StringBuffer string_p1 = (StringBuffer) msgUnmarshalled.getBody().getRequestBody().getParameters().get(0);
 				
