@@ -1,10 +1,10 @@
-
 import java.io.IOException;
 
 public class ReverserInvoker {
 	
-	public void invoke(int portInvokerService) throws IOException, Throwable {
-		ServerRequestHandler srh = new ServerRequestHandler(portInvokerService);
+	public void invoke(ClientProxy clientProxy) throws IOException, Throwable {
+		ServerRequestHandler srh = new ServerRequestHandler(
+				clientProxy.getPort());
 		byte[] msgToBeUnmarshalled = null;
 		byte[] msgMarshalled = null;
 		Message msgUnmarshalled = new Message();
