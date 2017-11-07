@@ -18,13 +18,14 @@ public class ProxyClientProxy extends ClientProxy implements IProxyClient{
 	}
 
 	@Override
-	public ReverserProxy proxy(NamingProxy namingService) throws Throwable {
+	public BindServerProxy proxy(NamingProxy namingService, int applicationType) throws Throwable {
 		Invocation inv = new Invocation();
 		Termination ter = new Termination();
 		Requestor requestor = new Requestor();
 		
 		ArrayList<Object> parameters = new ArrayList<Object>();
 		parameters.add(namingService);
+		parameters.add(applicationType);
 		
 		String methodName;
 		class Local {};
@@ -41,7 +42,7 @@ public class ProxyClientProxy extends ClientProxy implements IProxyClient{
 		ter = requestor.invoke(inv);
 
 		// @ Result sent back to Client
-		return (ReverserProxy) ter.getResult();
+		return (BindServerProxy) ter.getResult();
 	}
 
 }

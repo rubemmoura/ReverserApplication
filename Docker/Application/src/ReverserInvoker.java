@@ -1,15 +1,20 @@
 import java.io.IOException;
 
-public class ProxyInvoker {
+public class ReverserInvoker {
 	
-	public void invoke(int portNamingServer) throws IOException, Throwable {
-		ServerRequestHandler srh = new ServerRequestHandler(portNamingServer);
+	public void invoke(ClientProxy clientProxy) throws IOException, Throwable {
+		ServerRequestHandler srh = new ServerRequestHandler(
+				clientProxy.getPort());
 		byte[] msgToBeUnmarshalled = null;
 		byte[] msgMarshalled = null;
 		Message msgUnmarshalled = new Message();
 		Marshaller mrsh = new Marshaller();
 		Termination ter = new Termination();
+		int count = 0;
 
+		// create remote object
+		ReverserImpl reverserObj = new ReverserImpl();
+		
 		while (true) {
 
 			// @ Receive Message
@@ -19,21 +24,14 @@ public class ProxyInvoker {
 			msgUnmarshalled = mrsh.unmarshall(msgToBeUnmarshalled);
 
 			switch (msgUnmarshalled.getBody().getRequestHeader().getOperation()) {
-			case "proxy":
-				System.out.println(" - Executando proxy client.");
+			case "inverter":
+				count++;
+				System.out.println(count + " - Executando aplicacao do Server Dois.");
 				// @ Invokes the remote object
-				BindServerProxy reverserProxy;
-				NamingProxy namingProxy = (NamingProxy) msgUnmarshalled.getBody().getRequestBody().getParameters().get(0);
-				int applicationType = (int) msgUnmarshalled.getBody().getRequestBody().getParameters().get(1);
+				StringBuffer string_p1 = (StringBuffer) msgUnmarshalled.getBody().getRequestBody().getParameters().get(0);
 				
-				if(applicationType == 1) {
-					reverserProxy = (BindServerProxy) namingProxy.lookup("Reverser");
-				} else {
-					reverserProxy = (BindServerProxy) namingProxy.lookup("ReverserTwo");
-				}
-
 				//t1 = QoSObserver.getTime();
-				ter.setResult(reverserProxy);
+				ter.setResult(reverserObj.inverter(string_p1));
 				//t2 = QoSObserver.getTime();
 				//QoSObserver.saveTime(t2-t1);
 
