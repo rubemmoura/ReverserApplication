@@ -45,5 +45,33 @@ public class BindServerProxy extends ClientProxy implements IBindServer{
 		// @ Result sent back to Client
 		return (String) ter.getResult();
 	}
+	
+	@Override
+	public StringBuffer inverter(StringBuffer string, int applicationType) throws Throwable {
+		Invocation inv = new Invocation();
+		Termination ter = new Termination();
+		Requestor requestor = new Requestor();
+		
+		ArrayList<Object> parameters = new ArrayList<Object>();
+		parameters.add(string);
+		parameters.add(applicationType);
+		
+		String methodName;
+		class Local {};
+
+		// information received from Client
+		methodName = Local.class.getEnclosingMethod().getName();
+
+		// information sent to Requestor
+		inv.setClientProxy(this);
+		inv.setOperationName(methodName);
+		inv.setParameters(parameters);
+
+		// invoke Requestor
+		ter = requestor.invoke(inv);
+
+		// @ Result sent back to Client
+		return (StringBuffer) ter.getResult();
+	}
 
 }

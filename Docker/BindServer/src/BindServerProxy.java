@@ -47,7 +47,7 @@ public class BindServerProxy extends ClientProxy implements IBindServer{
 	}
 	
 	@Override
-	public StringBuffer inverter(StringBuffer string, int applicationType) throws Throwable {
+	public String inverter(StringBuffer string, int applicationType) throws Throwable {
 		Invocation inv = new Invocation();
 		Termination ter = new Termination();
 		Requestor requestor = new Requestor();
@@ -71,7 +71,7 @@ public class BindServerProxy extends ClientProxy implements IBindServer{
 		ter = requestor.invoke(inv);
 
 		// @ Result sent back to Client
-		return (StringBuffer) ter.getResult();
+		return (String) ter.getResult();
 	}
 
 }

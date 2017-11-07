@@ -22,14 +22,14 @@ public class ProxyInvoker {
 			case "proxy":
 				System.out.println(" - Executando proxy client.");
 				// @ Invokes the remote object
-				ReverserProxy reverserProxy;
+				BindServerProxy reverserProxy;
 				NamingProxy namingProxy = (NamingProxy) msgUnmarshalled.getBody().getRequestBody().getParameters().get(0);
 				int applicationType = (int) msgUnmarshalled.getBody().getRequestBody().getParameters().get(1);
 				
 				if(applicationType == 1) {
-					reverserProxy = (ReverserProxy) namingProxy.lookup("Reverser");
+					reverserProxy = (BindServerProxy) namingProxy.lookup("Reverser");
 				} else {
-					reverserProxy = (ReverserProxy) namingProxy.lookup("ReverserTwo");
+					reverserProxy = (BindServerProxy) namingProxy.lookup("ReverserTwo");
 				}
 
 				//t1 = QoSObserver.getTime();

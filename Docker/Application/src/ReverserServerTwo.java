@@ -9,7 +9,7 @@ public class ReverserServerTwo {
 		ReverserProxy reverser = new ReverserProxy("172.17.0.5",1317);
 		
 		BindServerProxy bindServiceProxy = new BindServerProxy("172.17.0.3",1316);
-		String serviceName = bindServiceProxy.bind(1, "ReverserTwo", reverser);
+		String serviceName = bindServiceProxy.bind(0, "ReverserTwo", reverser);
 		
 		
 		System.out.println("Servidor da aplicacao " + serviceName + " esta pronto.");

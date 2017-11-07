@@ -10,12 +10,13 @@ public class ReverserClient {
 		
 		// look for Reverser in Naming service
 		ProxyClientProxy clientProxy = new ProxyClientProxy("172.17.0.6", 1315);
-		ReverserProxy reverserProxy = clientProxy.proxy(namingService,1);
-		
+//		ReverserProxy reverserProxy = clientProxy.proxy(namingService,1);
+		BindServerProxy reverserProxy = clientProxy.proxy(namingService,0);
+
 		// invoke reverser		
 		StringBuffer str = new StringBuffer("Programacao concorrente Distribuida - Midlleware");
 		for(int i = 0; i<100; i++) {
-			str = reverserProxy.inverter(str);
+			str = reverserProxy.inverter(str, 0);
 			System.out.println(i + " " + str);
 			Thread.sleep(5);
 		}
