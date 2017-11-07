@@ -2,30 +2,31 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 
-public class ProxyClientProxy extends ClientProxy implements IProxyClient{
+public class BindServerProxy extends ClientProxy implements IBindServer{
 	
 	private static final long serialVersionUID = 1L;
 
 	// TODO objID
-	public ProxyClientProxy() throws UnknownHostException {
+	public BindServerProxy() throws UnknownHostException {
 		this.host = InetAddress.getLocalHost().getHostName();
 		this.port = Utils.nextPortAvailable();
 	}
 	
-	public ProxyClientProxy(String host, int port) {
+	public BindServerProxy(String host, int port) {
 		this.host = host;
 		this.port = port;
 	}
 
 	@Override
-	public ReverserProxy proxy(NamingProxy namingService, int applicationType) throws Throwable {
+	public String bind(int applicationType, String serviceName, ReverserProxy applicationProxy) throws Throwable {
 		Invocation inv = new Invocation();
 		Termination ter = new Termination();
 		Requestor requestor = new Requestor();
 		
 		ArrayList<Object> parameters = new ArrayList<Object>();
-		parameters.add(namingService);
 		parameters.add(applicationType);
+		parameters.add(serviceName);
+		parameters.add(applicationProxy);
 		
 		String methodName;
 		class Local {};
@@ -42,7 +43,7 @@ public class ProxyClientProxy extends ClientProxy implements IProxyClient{
 		ter = requestor.invoke(inv);
 
 		// @ Result sent back to Client
-		return (ReverserProxy) ter.getResult();
+		return (String) ter.getResult();
 	}
 
 }

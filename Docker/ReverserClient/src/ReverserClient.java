@@ -10,11 +10,11 @@ public class ReverserClient {
 		
 		// look for Reverser in Naming service
 		ProxyClientProxy clientProxy = new ProxyClientProxy("127.0.0.1", 1315);
-		ReverserProxy reverserProxy = clientProxy.proxy(namingService);
+		ReverserProxy reverserProxy = clientProxy.proxy(namingService,0);
 		
 		// invoke reverser		
 		StringBuffer str = new StringBuffer("Programacao concorrente Distribuida - Midlleware");
-		for(int i = 0; i<5000; i++) {
+		for(int i = 0; i<100; i++) {
 			str = reverserProxy.inverter(str);
 			System.out.println(i + " " + str);
 			Thread.sleep(5);

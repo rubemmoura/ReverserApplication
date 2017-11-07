@@ -12,7 +12,7 @@ public class ReverserServer {
 		String serviceName = bindServiceProxy.bind(1, "Reverser", reverser);
 		
 		
-		System.out.println("Servidor da aplicacao " + serviceName + " esta pronto.");
+		System.out.println("Servidor da aplicacao " + serviceName + "esta pronto.");
 		invoker.invoke(reverser);
 	}
 }
