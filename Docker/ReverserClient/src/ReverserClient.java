@@ -10,7 +10,6 @@ public class ReverserClient {
 		
 		// look for Reverser in Naming service
 		ProxyClientProxy clientProxy = new ProxyClientProxy("172.17.0.6", 1315);
-//		ReverserProxy reverserProxy = clientProxy.proxy(namingService,1);
 		BindServerProxy reverserProxy = clientProxy.proxy(namingService,0);
 
 		// invoke reverser		

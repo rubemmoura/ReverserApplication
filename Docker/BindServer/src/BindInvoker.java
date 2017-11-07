@@ -34,11 +34,9 @@ public class BindInvoker {
 				if((int) msgUnmarshalled.getBody().getRequestBody().getParameters().get(0) == 1) {
 					System.out.println("Entrou app 1");
 					applicationOne = (ReverserProxy) msgUnmarshalled.getBody().getRequestBody().getParameters().get(2);
-//					namingService.bind(serviceName, (ReverserProxy) msgUnmarshalled.getBody().getRequestBody().getParameters().get(2));
 				} else {
 					System.out.println("Entrou app 0");
 					applicationTwo = (ReverserProxy) msgUnmarshalled.getBody().getRequestBody().getParameters().get(2);
-//					namingService.bind(serviceName, (ReverserProxy) msgUnmarshalled.getBody().getRequestBody().getParameters().get(2));
 				}
 				
 				namingService.bind(serviceName, bindServer);
@@ -67,11 +65,9 @@ public class BindInvoker {
 				if((int) msgUnmarshalled.getBody().getRequestBody().getParameters().get(1) == 1) {
 					ter.setResult(applicationOne.inverter(string));
 					System.out.println(" - Invocando Inverter no ServerBind da aplicacao: 1");
-//					namingService2.bind(serviceName2, (ReverserProxy) msgUnmarshalled.getBody().getRequestBody().getParameters().get(2));
 				} else {
 					ter.setResult(applicationTwo.inverter(string));
 					System.out.println(" - Invocando Inverter no ServerBind da aplicacao: 0");
-//					namingService2.bind(serviceName2, (ReverserProxy) msgUnmarshalled.getBody().getRequestBody().getParameters().get(2));
 				}
 				
 				//t1 = QoSObserver.getTime();
