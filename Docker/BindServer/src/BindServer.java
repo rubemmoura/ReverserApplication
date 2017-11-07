@@ -13,7 +13,7 @@ public class BindServer {
 		
 		BindInvoker invoker = new BindInvoker();
 		
-		System.out.println("O Bind Server está em execução.");
+		System.out.println("O Bind Server esta em execucao.");
 		invoker.invoke(1316);
 	}
 }

@@ -6,11 +6,11 @@ public class ReverserClient {
 	public static void main(String[] args) throws UnknownHostException, IOException, Throwable {
 		
 		// create an instance of Naming Service
-		NamingProxy namingService = new NamingProxy("127.0.0.1", 1313);
+		NamingProxy namingService = new NamingProxy("172.17.0.2", 1313);
 		
 		// look for Reverser in Naming service
-		ProxyClientProxy clientProxy = new ProxyClientProxy("127.0.0.1", 1315);
-		ReverserProxy reverserProxy = clientProxy.proxy(namingService,0);
+		ProxyClientProxy clientProxy = new ProxyClientProxy("172.17.0.6", 1315);
+		ReverserProxy reverserProxy = clientProxy.proxy(namingService,1);
 		
 		// invoke reverser		
 		StringBuffer str = new StringBuffer("Programacao concorrente Distribuida - Midlleware");

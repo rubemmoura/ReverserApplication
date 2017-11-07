@@ -26,7 +26,7 @@ public class ReverserInvoker {
 			switch (msgUnmarshalled.getBody().getRequestHeader().getOperation()) {
 			case "inverter":
 				count++;
-				System.out.println(count + " - Executando aplicacao no Server.");
+				System.out.println(count + " - Executando aplicacao do Server Dois.");
 				// @ Invokes the remote object
 				StringBuffer string_p1 = (StringBuffer) msgUnmarshalled.getBody().getRequestBody().getParameters().get(0);
 				

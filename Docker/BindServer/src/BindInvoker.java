@@ -21,10 +21,10 @@ public class BindInvoker {
 			switch (msgUnmarshalled.getBody().getRequestHeader().getOperation()) {
 			case "bind":
 				// @ Invokes the remote object
-				NamingProxy namingService = new NamingProxy("127.0.0.1", 1313);
+				NamingProxy namingService = new NamingProxy("172.17.0.2", 1313);
 				String serviceName = (String) msgUnmarshalled.getBody().getRequestBody().getParameters().get(1);
 				
-				System.out.println(" - Executando bind no ServerBind da aplicação: " + serviceName);
+				System.out.println(" - Executando bind no ServerBind da aplicacao: " + serviceName);
 
 				if((int) msgUnmarshalled.getBody().getRequestBody().getParameters().get(0) == 1) {
 					namingService.bind(serviceName, (ReverserProxy) msgUnmarshalled.getBody().getRequestBody().getParameters().get(2));
