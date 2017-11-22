@@ -1,0 +1,208 @@
+[
+    {
+        "Id": "e6bae01217002b167dd0015b4a22b817967b3c5a909ee02c3cdad54663149dd5",
+        "Created": "2017-11-19T17:40:08.556449979Z",
+        "Path": "java",
+        "Args": [
+            "NamingServer"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 17812,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2017-11-19T17:40:09.114778174Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:ab580c7224338947d6d54780bca5327ecf81df928ae3b307c2849eb3d710659a",
+        "ResolvConfPath": "/var/lib/docker/containers/e6bae01217002b167dd0015b4a22b817967b3c5a909ee02c3cdad54663149dd5/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/e6bae01217002b167dd0015b4a22b817967b3c5a909ee02c3cdad54663149dd5/hostname",
+        "HostsPath": "/var/lib/docker/containers/e6bae01217002b167dd0015b4a22b817967b3c5a909ee02c3cdad54663149dd5/hosts",
+        "LogPath": "/var/lib/docker/containers/e6bae01217002b167dd0015b4a22b817967b3c5a909ee02c3cdad54663149dd5/e6bae01217002b167dd0015b4a22b817967b3c5a909ee02c3cdad54663149dd5-json.log",
+        "Name": "/friendly_franklin",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/home/rubemmoura/eclipse-workspace/ReverserApplication/Docker/NamingServer/src:/app"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "1313/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "1313"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": true,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "shareable",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": 0,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/1465dae291a8f36c4d0c4bbaeb91b802f266a9416677bfb7cdef8d337808150d-init/diff:/var/lib/docker/overlay2/485a2b7174837cef98c3a617bf3550664154cbdd3b2d776da35fc9f2f9c271c7/diff:/var/lib/docker/overlay2/2b6b82dfffd63736abf25b3d4dbd2c5c4df72cc7fb823f6f0bb04f9d4a635c0b/diff:/var/lib/docker/overlay2/2408746c730adbb75ad8f44c9e0c639c7c6d9abaaae27c85cb238e25bc69622f/diff:/var/lib/docker/overlay2/f7b228b7e6f688eaf9618af8e5e335e4fb941d0258eddaad6b492faaadeebc88/diff:/var/lib/docker/overlay2/b975143403c05270a5401292e6c6495a59c372f1e43e13c0c2e6cdf7e9ee0cfc/diff:/var/lib/docker/overlay2/80c0a417d9b1668dcab50741fdec407118b6040d1bd5af6730a8701556302cbf/diff:/var/lib/docker/overlay2/c437c4b07cd0ed2c31aa172e6aaafa7f0d0d8c448c9a3245f35f26d06ac85cf2/diff:/var/lib/docker/overlay2/895c5b3b6dd2da3d0c3e8cbfa26bd501104a6068086e1d5d2040f422b22e328f/diff:/var/lib/docker/overlay2/68464d12f4030fd045a87be03657388f5f967de530616def395238a01e7a0b67/diff:/var/lib/docker/overlay2/5837bce69badf6c990b60310d4f6b361b802f9eab20b70df551ed6cb215eb80b/diff:/var/lib/docker/overlay2/0d3e8dd21e1e52b639e7ead43cb19c7c3b5c1fa46a72f0df4e54565a28ac7233/diff:/var/lib/docker/overlay2/ec9db4217600a7a3340b4b2a52afff153d14a968ce0a3e2e514e81883357699d/diff:/var/lib/docker/overlay2/081f9a3f5459c3da9572561ab039ec05034fe1a5df78d48dfb1a4ef20e1dffc6/diff:/var/lib/docker/overlay2/1e7a7fca069a88c2395ff7a63fb6775f4878004dcfe65539d817c869f09ab5d9/diff:/var/lib/docker/overlay2/f26b28a63fdb77928b07ca7de920b4fb29d5898da5b04c1d1b4e66d5875880ac/diff",
+                "MergedDir": "/var/lib/docker/overlay2/1465dae291a8f36c4d0c4bbaeb91b802f266a9416677bfb7cdef8d337808150d/merged",
+                "UpperDir": "/var/lib/docker/overlay2/1465dae291a8f36c4d0c4bbaeb91b802f266a9416677bfb7cdef8d337808150d/diff",
+                "WorkDir": "/var/lib/docker/overlay2/1465dae291a8f36c4d0c4bbaeb91b802f266a9416677bfb7cdef8d337808150d/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/rubemmoura/eclipse-workspace/ReverserApplication/Docker/NamingServer/src",
+                "Destination": "/app",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "e6bae0121700",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "1313/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "JAVA_VER=8",
+                "JAVA_HOME=/usr/lib/jvm/java-8-oracle"
+            ],
+            "Cmd": [
+                "java",
+                "NamingServer"
+            ],
+            "Image": "demo/oracle-java:8",
+            "Volumes": null,
+            "WorkingDir": "/app",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {}
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "6322e876d3b1022ccca515324515ef08d6f402208191f1cc9a5da4b713d6a640",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "1313/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "1313"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/6322e876d3b1",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "dec8451860dc5e8bde92288ca9efa2646b191ce5fb07452876a1d39ae8097381",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "436a2f497963b16b38c4c303d1e864c5bec1a2423600487c365fe386e31d8a8e",
+                    "EndpointID": "dec8451860dc5e8bde92288ca9efa2646b191ce5fb07452876a1d39ae8097381",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
