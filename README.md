@@ -47,7 +47,23 @@ E por fim, executamos o CLiente com os comandos:
       
       sudo docker run --rm -v $PWD:/app -w /app demo/oracle-java:8 java ReverserClient
             
+Limitando a quantidade de memória, o comando de execução passa a ser:
+
+      sudo docker run -p 1313:1313 --rm -it -m 50m --memory-swap -1 -v $PWD:/app -w /app demo/oracle-java:8 java NamingServer
+      
+      sudo docker run --rm -it -m 50m --memory-swap -1 -v $PWD:/app -w /app demo/oracle-java:8 java BindServer
+      
+      sudo docker run -it -m 50m --memory-swap -1 -p 1314:1314 --rm -v $PWD:/app -w /app demo/oracle-java:8 java ReverserServer
+      
+      sudo docker run --rm -it -m 50m --memory-swap -1 -v $PWD:/app -w /app demo/oracle-java:8 java ReverserServerTwo
+      
+      sudo docker run --rm -it -m 50m --memory-swap -1 -v $PWD:/app -w /app demo/oracle-java:8 java ProxyClient
+      
+      sudo docker run --rm -it -m 50m --memory-swap -1 -v $PWD:/app -w /app demo/oracle-java:8 java ReverserClient
+
 Importate: Para que o BindServer consiga se comunicar com o NamingServer em outro container, é preciso o IP que esse container possui. Para isso executamos o comando:
 
       docker inspect CONTAINER_ID
+
+
 
