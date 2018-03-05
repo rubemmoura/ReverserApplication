@@ -10,6 +10,7 @@ public class NamingInvoker {
 		NamingImpl rObj = new NamingImpl();
 		Marshaller mrsh = new Marshaller();
 		Termination ter = new Termination();
+		int i=0;
 
 		while (true) {
 
@@ -24,7 +25,7 @@ public class NamingInvoker {
 
 			case "bind":
 				
-				System.out.println("Servidor de nomes - Executando BIND");
+				System.out.println("Servidor de nomes - Executando BIND " + i);
 				// @ Invokes the remote object
 				String register_p1 = msgUnmarshalled.getBody().getRequestBody()
 						.getParameters().get(0).toString();
@@ -43,6 +44,7 @@ public class NamingInvoker {
 
 				// @ Send response
 				srh.send(msgMarshalled);
+				i++;
 				break;
 
 			case "lookup":

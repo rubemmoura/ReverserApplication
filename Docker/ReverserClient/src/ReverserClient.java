@@ -13,19 +13,20 @@ public class ReverserClient {
 		BindServerProxy reverserProxy =null;
 		float time1, time2, proxyTime;
 		
-		time1 = System.nanoTime();
-		for(int i = 0; i<1000; i++) {
+//		time1 = System.nanoTime();
+//		for(int i = 0; i<40000; i++) {
 			reverserProxy = clientProxy.proxy(namingService,1);
-			Thread.sleep(5);
-		}
+//			Thread.sleep(9);
+//		}
 //		time2 = System.nanoTime();
+//		System.out.println("Tempo de execucao do inverter: " + ((time2-time1)));
 //		proxyTime = (time2-time1);
 		
 		// invoke reverser
 
-//		time1 = System.nanoTime();
+		time1 = System.nanoTime();
 		StringBuffer str = new StringBuffer("Programacao concorrente Distribuida - Midlleware");
-		for(int i = 0; i<1000; i++) {
+		for(int i = 0; i<10000; i++) {
 			str = reverserProxy.inverter(str,1);
 			System.out.println(i + " " + str);
 			Thread.sleep(5);

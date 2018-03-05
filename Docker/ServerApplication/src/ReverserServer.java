@@ -14,11 +14,11 @@ public class ReverserServer {
 		String serviceName = "";
 		time1 = System.nanoTime();
 
-		for(int i=0; i<1000; i++) {
-			serviceName = bindServiceProxy.bind(1, "Reverser" + i, reverser);
-			System.out.println("Servidor da aplicacao " + serviceName + " esta pronto.");
-			Thread.sleep(2);
-		}
+//		for(int i=0; i<40000; i++) {
+			serviceName = bindServiceProxy.bind(1, "Reverser", reverser);
+//			System.out.println("Servidor da aplicacao " + serviceName + " esta pronto.");
+//			Thread.sleep(6);
+//		}
 		
 		time2 = System.nanoTime();
 		System.out.println("Tempo de execucao: " + ((time2-time1)));
