@@ -31,6 +31,16 @@ public class ReverserClient {
 			System.out.println(i + " " + str);
 			Thread.sleep(5);
 		}
+
+		// reverserProxy = clientProxy.proxy(namingService,1);
+
+		// time1 = System.nanoTime();
+		// for(int i = 0; i<100; i++) {
+		// 	str = reverserProxy.inverter(str,1);
+		// 	System.out.println(i + " " + str);
+		// 	Thread.sleep(5);
+		// }
+
 		time2 = System.nanoTime();
 //		System.out.println("Tempo de execucao do proxy: " + proxyTime);
 		System.out.println("Tempo de execucao do inverter: " + ((time2-time1)));
